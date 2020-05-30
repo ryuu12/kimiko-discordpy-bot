@@ -20,7 +20,6 @@ class Nasib(commands.Cog):
                    'Mustahil',
                    'Ngaco, ya kagak lah',
                    'Tidak',
-                   'g',
                    'Bisa jadi'
                    'Mungkin saja',
                    'Kayaknya',
