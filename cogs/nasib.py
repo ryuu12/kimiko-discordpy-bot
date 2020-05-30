@@ -26,7 +26,7 @@ class Nasib(commands.Cog):
                    'Kayaknya',
                    'Gak tau juga']
 
-        await ctx.send(f'{random.choice(responses)}')
+        await ctx.send(f'{random.choice(jawaban)}')
 
 def setup(client):
     client.add_cog(Nasib(client))
