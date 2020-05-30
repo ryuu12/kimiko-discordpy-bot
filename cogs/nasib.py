@@ -16,14 +16,17 @@ class Nasib(commands.Cog):
                    'Sudah pasti',
                    'Tentu saja',
                    'Sudah pasti',
+                   'Ya iyalah',
                    'Tidak mungkin',
                    'Mustahil',
                    'Ngaco, ya kagak lah',
                    'Tidak',
+                   'Gak akan pernah',
                    'Bisa jadi'
                    'Mungkin saja',
                    'Kayaknya',
-                   'Gak tau juga']
+                   'Gak tau juga',
+                   'Coba tanya lagi']
 
         await ctx.send(f'{random.choice(jawaban)}')
 
