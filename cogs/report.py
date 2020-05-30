@@ -10,10 +10,5 @@ class Report(commands.Cog):
     async def on_ready(self):
         print('cogs report loaded.')
     
-    @commands.command()
-    async def report(self, ctx):
-        channel = client.get_channel(549717043671334913)
-        await ctx.channel.send('hello')
-
 def setup(client):
     client.add_cog(Report(client))
