@@ -15,7 +15,7 @@ class Nasib(commands.Cog):
         jawaban = ['Iya',
                    'Sudah pasti',
                    'Tentu saja',
-                   'Sudah mutlak',
+                   'Sudah pasti',
                    'Tidak mungkin',
                    'Mustahil',
                    'Ngaco, ya kagak lah',
