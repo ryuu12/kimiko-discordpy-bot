@@ -22,7 +22,7 @@ class Nasib(commands.Cog):
                    'Ngaco, ya kagak lah',
                    'Tidak',
                    'Gak akan pernah',
-                   'Bisa jadi'
+                   'Bisa jadi',
                    'Mungkin saja',
                    'Kayaknya',
                    'Gak tau juga',
