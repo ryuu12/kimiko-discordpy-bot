@@ -32,7 +32,7 @@ class Nasib(commands.Cog):
 
     @commands.command()
     async def lotre(self, ctx):
-        await ctx.send(f'Nomor lotre {user.mention} adalah `{random.randint(100000, 999999)}`')
+        await ctx.send(f'Nomor lotre anda adalah `{random.randint(100000, 999999)}`')
 
 def setup(client):
     client.add_cog(Nasib(client))
