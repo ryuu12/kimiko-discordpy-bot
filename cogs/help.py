@@ -26,18 +26,7 @@ class Help(commands.Cog):
 
         await ctx.send(author, embed=embed)
 
-    @commands.command()
-    async def helpping(self, ctx):
-        author = ctx.message.author
 
-        embed = discord.Embed(
-            colour=discord.Color.red()
-        )
-
-        embed.set_author(name='>ping')
-        embed.description(text='Untuk memeriksa ping.')
-
-        await ctx.send(author, embed=embed)
 
 def setup(client):
     client.add_cog(Help(client))
