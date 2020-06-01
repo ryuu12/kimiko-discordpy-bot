@@ -20,6 +20,7 @@ class Help(commands.Cog):
         embed.set_author(name='Help')
         embed.add_field(name='>ping', value='Check the ping.', inline=False)
         embed.add_field(name='>help', value='List of commands', inline=False)
+        embed.set_footer(text="For more detailed help, use >help(name of command)", icon_url=Embed.Empty)
 
         await ctx.send(author, embed=embed)
 
