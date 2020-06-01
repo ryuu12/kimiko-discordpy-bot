@@ -12,7 +12,7 @@ class Report(commands.Cog):
 
     @commands.command()
     @commands.has_any_role(481671645808033809)
-    async def report(self, ctx, member: discord.Member, *, arg):
+    async def report(ctx, member: discord.Member, *, arg):
         await ctx.send(member, 'reported for ', arg)
     
 def setup(client):
