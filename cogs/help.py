@@ -24,7 +24,7 @@ class Help(commands.Cog):
 
         await ctx.send(author, embed=embed)
 
-    @commands,co
+
 
 def setup(client):
     client.add_cog(Help(client))
