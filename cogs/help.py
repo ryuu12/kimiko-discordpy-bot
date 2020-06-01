@@ -26,6 +26,15 @@ class Help(commands.Cog):
 
         await ctx.send(author, embed=embed)
 
+    @commands.command()
+    async def helpping(self, ctx):
+        await ctx.send('```>ping: \nMemeriksa ping anda.```')
+
+    async def helpnasib(self, ctx):
+        await ctx.send('```>nasib:\nMelihat nasib anda. Pertanyaan harus berupa Ya/Tidak.\nContoh: >nasib Apakah saya hari ini bisa makan?```')
+
+    async def helplotre(self, ctx):
+        await ctx.send('```>lotre:\nMengundi nomor lotre anda. Bila nomor lotre anda sesuai dengan nomor lotre hari ini  (hanya admin yang bisa menggunakan perintah untuk memeriksa lotre hari ini), maka selamat.```')
 
 
 def setup(client):
