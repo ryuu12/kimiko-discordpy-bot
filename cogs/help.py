@@ -46,7 +46,7 @@ class Help(commands.Cog):
     @commands.command()
     @commands.has_any_role(507440134774587415)
     async def devtools(self, ctx):
-        await ctx.send('```Developer Tools\n >load:\n  Load a cogs to the bot.\n  Example: >load {extension}\n >unload:\n  Unload a cogs from the bot.\n  Example: >unload {extension}\nList of Cogs\n ban\n  >ban\n  >unban\n kick\n  >kick\n ping\n  >ping\n nasib\n  >nasib\n  >lotre\n  >ceklotre\n help\n  >help\n  >helpping\n  >helpnasib\n  >helplotre\n  >helpadmin\n  >devtools   ```')
+        await ctx.send('```Developer Tools\n >load:\n  Load a cogs to the bot.\n  Example: >load {extension}\n >unload:\n  Unload a cogs from the bot.\n  Example: >unload {extension}\nList of Cogs\n ban\n  ban\n  unban\n kick\n  kick\n ping\n  ping\n nasib\n  nasib\n  lotre\n  ceklotre\n help\n  help\n  helpping\n  helpnasib\n  helplotre\n  helpadmin\n  devtools   ```')
 
 def setup(client):
     client.add_cog(Help(client))
