@@ -22,6 +22,7 @@ class Help(commands.Cog):
         embed.add_field(name='>help', value='Melihat daftar perintah.', inline=False)
         embed.add_field(name='>nasib', value='Menanyakan nasib.', inline=False)
         embed.add_field(name='>lotre', value='Mengundi nomor lotre', inline=False)
+        embed.add_field(name='>report', value='Melaporkan anggota yang melanggar peraturan (Hanya boleh digunakan di channel #staff-support).')
         embed.set_footer(text="For more detailed help, use >help(name of command)")
 
         await ctx.send(author, embed=embed)
@@ -39,6 +40,10 @@ class Help(commands.Cog):
         await ctx.send('```>lotre:\nMengundi nomor lotre anda. Bila nomor lotre anda sesuai dengan nomor lotre hari ini  (hanya admin yang bisa menggunakan perintah untuk memeriksa lotre hari ini), maka selamat.```')
 
     @commands.command()
+    async def helpreport(self, ctx):
+        await ctx.send('```>report:\nMelaporkan anggota yang melanggar peraturan server. Perintah ini hanya boleh digunakan di channel #staff-support.\nContoh: >report {user} {alasan} ```')
+
+    @commands.command()
     @commands.has_any_role(481671645808033809)
     async def helpadmin(self, ctx):
         await ctx.send('```Daftar Perintah Khusus Admin. \n >ban\n  Perintah untuk melakukan ban terhadap member tertentu.\n  contoh: >ban {user} {alasan} \n >kick\n  Perintah untuk melakukan kick terhadap member tertentu.\n  contoh: >kick {user} {alasan}\n >ceklotre:\n  Untuk memerika nomor lotre hari ini.\n >clear:\n  Untuk menghapus pesan di dalam channel.\n  contoh: >clear {jumlah pesan yang akan dihapus} ```')
@@ -46,7 +51,7 @@ class Help(commands.Cog):
     @commands.command()
     @commands.has_any_role(507440134774587415)
     async def devtools(self, ctx):
-        await ctx.send('```Developer Tools\n >load:\n  Load a cogs to the bot.\n  Example: >load {extension}\n >unload:\n  Unload a cogs from the bot.\n  Example: >unload {extension}\nList of Cogs\n ban\n  ban\n  unban\n kick\n  kick\n ping\n  ping\n nasib\n  nasib\n  lotre\n  ceklotre\n help\n  help\n  helpping\n  helpnasib\n  helplotre\n  helpadmin\n  devtools   ```')
+        await ctx.send('```Developer Tools\n >load:\n  Load a cogs to the bot.\n  Example: >load {extension}\n >unload:\n  Unload a cogs from the bot.\n  Example: >unload {extension}\nList of Cogs\n ban\n  ban\n  unban\n kick\n  kick\n ping\n  ping\n nasib\n  nasib\n  lotre\n  ceklotre\n help\n  help\n  helpping\n  helpnasib\n  helplotre\n  helpreport\n  helpadmin\n  devtools   ```')
 
 def setup(client):
     client.add_cog(Help(client))
