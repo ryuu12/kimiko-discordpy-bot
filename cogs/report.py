@@ -12,9 +12,9 @@ class Report(commands.Cog):
 
     @commands.command()
     @commands.has_any_role(481671645808033809)
-    async def report(self, ctx, *, message):
+    async def report(self, ctx, *, reason=None):
         channel = client.get_channel(495597599508922378)
-        await ctx.send('{}'.format(message))
+        await ctx.send('warned for ', reason=reason)
     
 def setup(client):
     client.add_cog(Report(client))
