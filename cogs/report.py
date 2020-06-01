@@ -15,7 +15,7 @@ class Report(commands.Cog):
         channel = self.client.get_channel(495597599508922378)
         author = ctx.message.author
         await ctx.send(f'{member} sudah dilaporkan.')
-        await channel.send(f'@{member} dilaporkan karena {arg} oleh {author}')
+        await channel.send(f'{member} dilaporkan karena {arg} oleh {author}')
 
 def setup(client):
     client.add_cog(Report(client))
