@@ -12,9 +12,8 @@ class Report(commands.Cog):
 
     @commands.command()
     @commands.has_any_role(481671645808033809)
-    async def report(self, ctx):
-        channel = client.get_channel(549717043671334913)
-        await ctx.send(channel, 'hello')
+    async def report(self, ctx, member: discord.Member, *, arg):
+        await ctx.send(member, 'reported for ', arg)
     
 def setup(client):
     client.add_cog(Report(client))
