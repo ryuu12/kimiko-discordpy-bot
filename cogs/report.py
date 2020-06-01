@@ -17,5 +17,13 @@ class Report(commands.Cog):
         await ctx.send(f'{member} sudah dilaporkan.')
         await channel.send(f'{member} dilaporkan karena {arg} oleh {author}')
 
+    @commands.command()
+    @commands.has_any_role(481671645808033809)
+    async def warn(self, ctx, member: discord.Member, *, arg):
+        channel = self.client.get_channel(495597599508922378)
+        await ctx.send(f'{member} diberikan peringatan. Alasan: {arg}')
+        await channel.send(f'{member} diberikan peringatan. Alasan: {arg}')
+
+
 def setup(client):
     client.add_cog(Report(client))
