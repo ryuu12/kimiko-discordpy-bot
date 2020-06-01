@@ -9,7 +9,7 @@ class Help(commands.Cog):
     async def on_ready(self):
         print('cogs help loaded')
 
-    @commands.command(pass_context=True)
+    @commands.command()
     async def help(self, ctx):
         author = ctx.message.author
 
@@ -23,6 +23,8 @@ class Help(commands.Cog):
         embed.set_footer(text="For more detailed help, use >help(name of command)")
 
         await ctx.send(author, embed=embed)
+
+    @commands,co
 
 def setup(client):
     client.add_cog(Help(client))
