@@ -72,13 +72,13 @@ async def level_up(users, user, message):
         users[f'{user.id}']['level'] = lvl_end
 
 @client.command()
-@commands.has_any_role('Admins')
+@commands.has_any_role(507440134774587415)
 async def load(ctx, extension):
     client.load_extension(f'cogs.{extension}')
     await ctx.send(f'{extension} loaded')
 
 @client.command()
-@commands.has_any_role('Admins')
+@commands.has_any_role(507440134774587415)
 async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
     await ctx.send(f'{extension} unloaded')

@@ -35,7 +35,7 @@ class Nasib(commands.Cog):
         await ctx.send(f'Nomor lotre {ctx.message.author} adalah ```{random.randint(1, 999999999)}```')
 
     @commands.command()
-    @commands.has_any_role('Admins')
+    @commands.has_any_role(481671645808033809)
     async def ceklotre(self, ctx):
         await ctx.send(f'Nomor lotre hari ini adalah ```{random.randint(1, 999999999)}```')
 

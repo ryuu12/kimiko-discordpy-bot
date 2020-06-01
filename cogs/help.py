@@ -38,6 +38,11 @@ class Help(commands.Cog):
     async def helplotre(self, ctx):
         await ctx.send('```>lotre:\nMengundi nomor lotre anda. Bila nomor lotre anda sesuai dengan nomor lotre hari ini  (hanya admin yang bisa menggunakan perintah untuk memeriksa lotre hari ini), maka selamat.```')
 
+    @commands.command()
+    @commands.has_any_role(481671645808033809)
+    async def helpadmin(self, ctx):
+        await ctx.send('```Daftar Perintah Khusus Admin. \n >ban\n  Perintah untuk melakukan ban terhadap member tertentu.\n contoh: >ban {user} {alasan} \n >kick\n  Perintah untuk melakukan kick terhadap member tertentu.\n contoh: >kick {user} {alasan}\n >ceklotre:\n  Untuk memerika nomor lotre hari ini.\n >clear:\n  Untuk menghapus pesan di dalam channel.\n contoh: >clear {jumlah pesan yang akan dihapus} ```')
+
 
 def setup(client):
     client.add_cog(Help(client))

@@ -11,12 +11,12 @@ class BanUser(commands.Cog):
         print('cogs ban loaded.')
 
     @commands.command()
-    @commands.has_any_role('Admins')
+    @commands.has_any_role(481671645808033809)
     async def ban(ctx, member: discord.Member, *, reason=None):
         await member.ban(reason=reason)
 
     @commands.command()
-    @commands.has_any_role('Admins')
+    @commands.has_any_role(481671645808033809)
     async def unban(ctx, *, member):
         banned_users = await ctx.guild.bans()
         member_name, member_discriminator = member.split('#')
