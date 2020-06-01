@@ -32,7 +32,7 @@ class Nasib(commands.Cog):
 
     @commands.command()
     async def lotre(self, ctx):
-        await ctx.send(f'Nomor {ctx.message.author} anda adalah ```{random.randint(1, 999999999)}```')
+        await ctx.send(f'Nomor lotre {ctx.message.author} adalah ```{random.randint(1, 999999999)}```')
 
     @commands.command()
     @commands.has_any_role('Admins')
