@@ -13,7 +13,9 @@ class Report(commands.Cog):
     @commands.command()
     async def report(self, ctx, member: discord.Member, *, arg):
         channel = self.client.get_channel(495597599508922378)
-        await channel.send(f'@{member} reported for {arg}')
+        author = ctx.message.author
+        await ctx.send(f'{member} sudah dilaporkan.')
+        await channel.send(f'@{member} dilaporkan karena {arg} oleh {author}')
 
 def setup(client):
     client.add_cog(Report(client))
