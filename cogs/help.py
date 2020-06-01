@@ -18,13 +18,26 @@ class Help(commands.Cog):
         )
 
         embed.set_author(name='Help')
-        embed.add_field(name='>ping', value='Check the ping.', inline=False)
-        embed.add_field(name='>help', value='List of commands', inline=False)
+        embed.add_field(name='>ping', value='Cek ping.', inline=False)
+        embed.add_field(name='>help', value='Melihat daftar perintah.', inline=False)
+        embed.add_field(name='>nasib', value='Menanyakan nasib.', inline=False)
+        embed.add_field(name='>lotre', value='Mengundi nomor lotre', inline=False)
         embed.set_footer(text="For more detailed help, use >help(name of command)")
 
         await ctx.send(author, embed=embed)
 
+    @commands.command()
+    async def helpping(self, ctx):
+        author = ctx.message.author
 
+        embed = discord.Embed(
+            colour=discord.Color.red()
+        )
+
+        embed.set_author(name='>ping')
+        embed.description(text='Untuk memeriksa ping.')
+
+        await ctx.send(author, embed=embed)
 
 def setup(client):
     client.add_cog(Help(client))
