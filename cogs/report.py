@@ -12,7 +12,7 @@ class Report(commands.Cog):
 
     @commands.command()
     @commands.has_any_role(481671645808033809)
-    async def report(sel:
+    async def report(self):
         channel = client.get_channel(12324234183172)
         await channel.send('hello')
     
