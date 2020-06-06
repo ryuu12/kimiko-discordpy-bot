@@ -5,12 +5,12 @@ class Role(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.Cog.listener()
+    @commands.command()
     async def role(self, ctx, role: discord.Role):
-    if role in ctx.author.roles:
-        await ctx.author.remove_roles(role)
-    else:
-        await ctx.author.add_roles(role)
+        if role in ctx.author.roles:
+            await ctx.author.remove_roles(role)
+        else:
+            await ctx.author.add_roles(role)
 
     @commands.command()
     @commands.has_any_role(481671645808033809)
