@@ -12,20 +12,6 @@ class Role(commands.Cog):
         else:
             await ctx.author.add_roles(role)
 
-    @commands.command()
-    @commands.has_any_role(481671645808033809)
-    async def listrole(self, ctx):
-        author = ctx.message.author
-
-        embed = discord.Embed(
-            colour = discord.Color.red()
-        )
-
-        embed.set_author(name='List of role')
-        embed.add_field(name='Color Role', value='@Green @Orange @Yellow @Pink @Red @Violet @Blue @Grey', inline=False)
-
-        await ctx.send(author, embed=embed)
-
 def setup(client):
     client.add_cog(Role(client))
     
