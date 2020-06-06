@@ -12,7 +12,7 @@ class Role(commands.Cog):
     else:
         await ctx.author.add_roles(role)
 
-    @commands.Cog.listener()
+    @commands.command()
     @commands.has_any_role(481671645808033809)
     async def listrole(self, ctx)
         author = ctx.message.author
