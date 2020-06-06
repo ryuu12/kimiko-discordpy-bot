@@ -27,5 +27,5 @@ class Role(commands.Cog):
         await ctx.send(author, embed=embed)
 
 def setup(client):
-    client.add_cog(Clear(client))
+    client.add_cog(Role(client))
     
