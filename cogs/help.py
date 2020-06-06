@@ -22,6 +22,7 @@ class Help(commands.Cog):
         embed.add_field(name='>help', value='Melihat daftar perintah.', inline=False)
         embed.add_field(name='>nasib', value='Menanyakan nasib.', inline=False)
         embed.add_field(name='>lotre', value='Mengundi nomor lotre', inline=False)
+        embed.add_field(name='>role', value='Menambahkan role', inline=False)
         embed.add_field(name='>report', value='Melaporkan anggota yang melanggar peraturan (Hanya boleh digunakan di channel #staff-support).')
         embed.set_footer(text="For more detailed help, use >help(name of command)")
 
