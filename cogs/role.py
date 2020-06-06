@@ -14,7 +14,7 @@ class Role(commands.Cog):
 
     @commands.command()
     @commands.has_any_role(481671645808033809)
-    async def listrole(self, ctx)
+    async def listrole(self, ctx):
         author = ctx.message.author
 
         embed = discord.Embed(
