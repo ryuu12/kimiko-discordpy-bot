@@ -24,6 +24,8 @@ class Role(commands.Cog):
         embed.set_author(name='List of role')
         embed.add_field(name='Color Role', value='@Green @Orange @Yellow @Pink @Red @Violet @Blue @Grey', inline=False)
 
+        await ctx.send(author, embed=embed)
+
 def setup(client):
     client.add_cog(Clear(client))
     
