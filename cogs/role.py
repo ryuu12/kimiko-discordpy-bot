@@ -5,8 +5,8 @@ class Role(commands.Cog):
     def __init__(self, client):
         self.client = client
 
-    @commands.command()
-    async def role(self, ctx, role: discord.Role):
+    @commands.command(name='role')
+    async def _role(self, ctx, role: discord.Role):
         if role in ctx.author.roles:
             await ctx.author.remove_roles(role)
         else:
