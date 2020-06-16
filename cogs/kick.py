@@ -14,7 +14,7 @@ class KickUser(commands.Cog):
     @commands.has_any_role(481671645808033809)
     async def kick(ctx, member: discord.Member, *, reason=None):
         await member.kick(reason=reason)
-        await ctx.send(f'**{member}** telah di **kick** karena {reason}')
+        await ctx.send(f'**{member}** telah di **kick** karena **{reason}**')
 
 def setup(client):
     client.add_cog(KickUser(client))
