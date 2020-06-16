@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/../discordpybot/.idea/discordpybot.iml" filepath="$PROJECT_DIR$/../discordpybot/.idea/discordpybot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../kerangajaibpy/.idea/kerangajaibpy.iml" filepath="$PROJECT_DIR$/../kerangajaibpy/.idea/kerangajaibpy.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/kimikopy.iml" filepath="$PROJECT_DIR$/.idea/kimikopy.iml" />
     </modules>
   </component>
