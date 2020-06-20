@@ -6,7 +6,7 @@ from itertools import cycle
 
 client = commands.Bot(command_prefix='>')
 client.remove_command('help')
-status = cycle(['75th Indonesia Maju', 'KINNOKURA', 'Klub Jepang SMAITUQ', 'ウキの日本語のクラブ', 'Obey and worship me', 'Im the anti-christ'])
+status = cycle(['75th Indonesia Maju', 'KINNOKURA', 'Klub Jepang SMAITUQ', 'ウキの日本語のクラブ'])
 
 @client.event
 async def on_command_error(ctx, error):
