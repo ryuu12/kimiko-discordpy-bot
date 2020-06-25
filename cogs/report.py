@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 from discord.utils import get
-
+#some of the strings are in my native language
 class Report(commands.Cog):
     def __init__(self, client):
         self.client = client

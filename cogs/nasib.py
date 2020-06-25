@@ -1,7 +1,7 @@
 import discord
 from discord.ext import commands
 import random
-
+#some of the strings are in my native language
 class Nasib(commands.Cog):
     def __init__(self, client):
         self.client = client

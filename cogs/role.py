@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-
+#some of the strings are in my native language
 class Role(commands.Cog):
     def __init__(self, client):
         self.client = client

@@ -3,10 +3,10 @@ import os
 import json
 from discord.ext import commands, tasks
 from itertools import cycle
-
+#some of the strings are in my native language
 client = commands.Bot(command_prefix='>')
 client.remove_command('help')
-status = cycle(['75th Indonesia Maju', 'KINNOKURA', 'Klub Jepang SMAITUQ', 'ウキの日本語のクラブ'])
+status = cycle(['Status 1', 'Status 2', 'Status 3'])
 
 @client.event
 async def on_command_error(ctx, error):
@@ -83,4 +83,4 @@ async def unload(ctx, extension):
     client.unload_extension(f'cogs.{extension}')
     await ctx.send(f'{extension} unloaded')
 
-client.run('NTA3NDAwNDQxOTk1MzI5NTQ2.XpckMA.xcpYg2ThYJcpyID9YTL_3FMdpSI')
+client.run('')
