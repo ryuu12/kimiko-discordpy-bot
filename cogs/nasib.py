@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 import random
 #some of the strings are in my native language
+#nasib means like your destiny, thi is more into like 8ball command
 class Nasib(commands.Cog):
     def __init__(self, client):
         self.client = client
@@ -30,12 +31,14 @@ class Nasib(commands.Cog):
 
         await ctx.send(f'{random.choice(jawaban)}')
 
+    #For lottery
     @commands.command()
     async def lotre(self, ctx):
         await ctx.send(f'Nomor lotre {ctx.message.author} adalah ```{random.randint(1, 999999999)}```')
 
+    #To see today's lottery number
     @commands.command()
-    @commands.has_any_role(481671645808033809)
+    @commands.has_any_role("")
     async def ceklotre(self, ctx):
         await ctx.send(f'Nomor lotre hari ini adalah ```{random.randint(1, 999999999)}```')
 

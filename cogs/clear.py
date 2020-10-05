@@ -10,7 +10,7 @@ class Clear(commands.Cog):
         print('cogs clear loaded.')
 
     @commands.command()
-    @commands.has_any_role('Admins')
+    @commands.has_any_role('')#Put any role on the string
     async def clear(self, ctx, amount=1):
         await ctx.channel.purge(limit=amount)
 

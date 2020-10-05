@@ -11,7 +11,7 @@ class KickUser(commands.Cog):
         print('cogs kick loaded.')
 
     @commands.command()
-    @commands.has_any_role(481671645808033809)
+    @commands.has_any_role("")#Put the name any role on the string, 
     async def kick(ctx, member: discord.Member, *, reason=None):
         await member.kick(reason=reason)
         await ctx.send(f'**{member}** telah di **kick** karena **{reason}**')

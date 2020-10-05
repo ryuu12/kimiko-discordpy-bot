@@ -45,12 +45,12 @@ class Help(commands.Cog):
         await ctx.send('```>report:\nMelaporkan anggota yang melanggar peraturan server. Perintah ini hanya boleh digunakan di channel #staff-support.\nContoh: >report {user} {alasan} ```')
 
     @commands.command()
-    @commands.has_any_role(481671645808033809)
+    @commands.has_any_role("")#Put the name of the role on the string
     async def helpadmin(self, ctx):
         await ctx.send('```Daftar Perintah Khusus Admin. \n >ban\n  Perintah untuk melakukan ban terhadap member tertentu.\n  contoh: >ban {user} {alasan} \n >kick\n  Perintah untuk melakukan kick terhadap member tertentu.\n  contoh: >kick {user} {alasan}\n >ceklotre\n  Untuk memerika nomor lotre hari ini.\n >clear\n  Untuk menghapus pesan di dalam channel.\n  contoh: >clear {jumlah pesan yang akan dihapus}\n >warn\n  Untuk memberikan peringatan kepada anggota tertentu.\n  Contoh: >warn {user} {alasan} ```')
 
     @commands.command()
-    @commands.has_any_role(507440134774587415)
+    @commands.has_any_role("")#Put the name of the role on the string
     async def devtools(self, ctx):
         await ctx.send('```Developer Tools\n >load:\n  Load a cogs to the bot.\n  Example: >load {extension}\n >unload:\n  Unload a cogs from the bot.\n  Example: >unload {extension}\nList of Cogs\n ban\n  ban\n  unban\n kick\n  kick\n ping\n  ping\n nasib\n  nasib\n  lotre\n  ceklotre\n report\n  report\n  warn\n help\n  help\n  helpping\n  helpnasib\n  helplotre\n  helpreport\n  helpadmin\n  devtools   ```')
 
