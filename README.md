@@ -15,10 +15,10 @@ pip install discord.py
 ## Usage
 
 I've already made a template inside the code, so you can change the code to whatever you want. There are some main bot features in the cogs.
--Ban command
--Help command
--Report command
--Kick command
+- Ban command
+- Help command
+- Report command
+- Kick command
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
