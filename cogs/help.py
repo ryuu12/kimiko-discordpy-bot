@@ -1,7 +1,18 @@
+#
+# Help Cogs
+# Command for showing list of available commands.
+#
+
 import discord
 from discord.ext import commands
-#some of the strings are in my native language
+
 class Help(commands.Cog):
+
+    # Every function that started with this constructor:
+    # @commands.command()
+    # @commands.has_any_role("role name")
+    # Would only be used by the specific mentioned role.
+
     def __int__(self, client):
         self.client = client
 
@@ -9,6 +20,7 @@ class Help(commands.Cog):
     async def on_ready(self):
         print('cogs help loaded')
 
+    #Help Command
     @commands.command()
     async def help(self, ctx):
         author = ctx.message.author
@@ -17,6 +29,7 @@ class Help(commands.Cog):
             colour = discord.Color.red()
         )
 
+        #Showing list of command using embedded message.
         embed.set_author(name='Help')
         embed.add_field(name='>ping', value='Cek ping.', inline=False)
         embed.add_field(name='>help', value='Melihat daftar perintah.', inline=False)
@@ -28,6 +41,7 @@ class Help(commands.Cog):
 
         await ctx.send(author, embed=embed)
 
+    ### This are commands to show more detailed information about each commands ###
     @commands.command()
     async def helpping(self, ctx):
         await ctx.send('```>ping: \nMemeriksa ping anda.```')

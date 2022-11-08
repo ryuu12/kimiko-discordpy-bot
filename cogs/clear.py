@@ -1,7 +1,18 @@
+#
+# Clear Cogs.
+# Command for clearing messages.
+#
+
 import discord
 from discord.ext import commands
-#some of the strings are in my native language
+
 class Clear(commands.Cog):
+
+    # Every function that started with this constructor:
+    # @commands.command()
+    # @commands.has_any_role("role name")
+    # Would only be used by the specific mentioned role.
+    
     def __init__(self, client):
         self.client = client
 
@@ -9,8 +20,9 @@ class Clear(commands.Cog):
     async def on_ready(self):
         print('cogs clear loaded.')
 
+    # Clear command
     @commands.command()
-    @commands.has_any_role('')#Put any role on the string
+    @commands.has_any_role('')
     async def clear(self, ctx, amount=1):
         await ctx.channel.purge(limit=amount)
 

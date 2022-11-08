@@ -1,11 +1,21 @@
+#
+# Kimiko Discord Bot 
+# Made using DIscord.py
+#
+# Created for Kinokura Discord Server.
+# To use the template, please remove the "Kinnokura" branding.
+#
+
 import discord
 import os
 import json
 from discord.ext import commands, tasks
 from itertools import cycle
-#some of the strings are in my native language
+
 client = commands.Bot(command_prefix='>')
+# Removing the default help command (from Discord.py).
 client.remove_command('help')
+# Cycled Discord status.
 status = cycle(['Status 1', 'Status 2', 'Status 3'])
 
 #For catching errors
